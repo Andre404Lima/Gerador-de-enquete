@@ -1,103 +1,101 @@
-# Sistema de Enquetes Django
+# 🗂️ Sistema de Enquetes Django
 
-## Descrição
+Sistema web para criação e gerenciamento de enquetes, desenvolvido em **Python + Django**. Permite criar perguntas com múltiplas opções, controlar data de encerramento das enquetes e gerenciar votos via painel administrativo do Django.
 
-Projeto web em Django para criação e gerenciamento de enquetes com múltiplas opções.  
-Possui painel administrativo para criar perguntas, adicionar opções e controlar data de encerramento.  
-Ideal para quem quer aprender Django básico, modelos, migrações e admin.
+---
 
-## Requisitos
+## 🚀 Tecnologias Utilizadas
+- **Backend:** Python, Django
+- **Banco de Dados:** SQLite (padrão) / PostgreSQL (opcional)
+- **Admin:** Django Admin para gerenciamento das enquetes
 
-- Python 3.8+  
-- Django 4.x  
-- (Opcional) PostgreSQL para banco de dados
+---
 
-## Instalação
+## 🏗️ Funcionalidades
+- ✅ Cadastro e edição de enquetes via painel administrativo  
+- ✅ Adição de múltiplas opções para cada enquete  
+- ✅ Controle de data de encerramento para bloquear votos  
+- ✅ Visualização de status das enquetes (aberta/encerrada)  
 
-1. Clone o repositório:
+---
 
+## 🚀 Futuras melhorias
+- 🚧 Implementar interface web pública para votação  
+- 🚧 Criar página de resultados das enquetes  
+- 🚧 Adicionar autenticação de usuários comuns  
+- 🚧 Melhorar interface com CSS e frameworks front-end  
+- 🚧 Migrar banco para PostgreSQL para ambiente de produção  
+- 🚧 Implementar testes automatizados  
+
+---
+
+## 📦 Estrutura do Projeto
+
+sistema_enquetes/
+
+├── enquete/ # Aplicação Django para gerenciar enquetes  
+│   ├── admin.py # Configuração do painel administrativo  
+│   ├── models.py # Modelos Enquete e Opcao  
+│   ├── views.py # Views (a implementar)  
+│   ├── migrations/ # Migrações do banco de dados  
+│   └── templates/ # Templates HTML (a implementar)  
+
+├── sistema_enquetes/ # Configurações do projeto Django  
+│   ├── settings.py  
+│   ├── urls.py  
+│   └── wsgi.py  
+
+├── manage.py # Script para executar comandos Django  
+
+└── venv/ # Ambiente virtual Python  
+
+---
+
+## 🔧 Como rodar o projeto localmente
+
+1️⃣ Clone o repositório  
+```bash
 git clone <URL_DO_REPOSITORIO>
 cd sistema_enquetes
+2️⃣ Crie e ative o ambiente virtual
 
-cpp
+bash
 Copiar
 Editar
-
-2. Crie e ative o ambiente virtual:
-
 python -m venv venv
-
-Windows
+# Windows
 .\venv\Scripts\Activate.ps1
-
-Linux/macOS
+# Linux/macOS
 source venv/bin/activate
+3️⃣ Instale as dependências
 
-csharp
+bash
 Copiar
 Editar
-
-3. Instale as dependências:
-
 pip install django
+4️⃣ (Opcional) Configure banco PostgreSQL em sistema_enquetes/settings.py
 
-markdown
+5️⃣ Execute as migrações
+
+bash
 Copiar
 Editar
-
-4. (Opcional) Configure banco PostgreSQL em `settings.py`.
-
-5. Execute as migrações:
-
 python manage.py migrate
+6️⃣ Crie um superusuário para acessar o admin
 
-markdown
+bash
 Copiar
 Editar
-
-6. Crie um superusuário para acessar o admin:
-
 python manage.py createsuperuser
+7️⃣ Inicie o servidor de desenvolvimento
 
-markdown
+bash
 Copiar
 Editar
-
-7. Inicie o servidor:
-
 python manage.py runserver
+8️⃣ Acesse o painel administrativo
+http://127.0.0.1:8000/admin/
 
-markdown
-Copiar
-Editar
-
-8. Acesse o admin em [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
-
-## Como usar
-
-- No painel admin, crie enquetes e opções.  
-- Enquetes podem ter data de encerramento para bloquear votos depois.  
-- (Próximos passos: criar interface pública para votar.)
-
-## Estrutura do projeto
-
-- `enquete/models.py` — modelos das tabelas Enquete e Opcao  
-- `enquete/admin.py` — configuração do painel administrativo  
-- `enquete_site/settings.py` — configurações do Django  
-
-
-## Implementações Futuras
-
-🚧 Criar views e templates para exibir enquetes para usuários votarem  
-
-🚧 Implementar sistema de votação com atualização dos votos  
-
-🚧 Criar página de resultados das enquetes  
-
-🚧 Adicionar autenticação de usuários comuns para controlar quem pode votar  
-
-🚧 Melhorar design com CSS e frameworks front-end  
-
-🚧 Implementar testes automatizados para garantir qualidade  
-
-🚧 Configurar deploy em servidor de produção com PostgreSQL  
+👨‍💻 Desenvolvido por
+Andre Lima
+LinkedIn: André Crisóstomo Nobre Lima
